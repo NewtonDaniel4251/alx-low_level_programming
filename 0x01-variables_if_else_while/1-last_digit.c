@@ -1,19 +1,17 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main - This program will assign a random number to the variable n each time it is executed.
- * return: Always 0 (success)
+ * main - Determines either greater than 5, is less than 6, or is 0
+ *
+ * Return: Always 0 (Success)
  */
-
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
-
 int main(void)
 {
 	int n;
 	int l;
-	
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	l = n % 10;
