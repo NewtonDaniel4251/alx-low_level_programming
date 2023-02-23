@@ -1,37 +1,34 @@
 #include <stdio.h>
-#include <ctype.h>
-/**
- * main - Prints Fizz, Buzz and FizzBuzz
- *
- * Return: Always 0 (Success)
- */
 
+/**
+ * main - prints Buzz each numbers of 3 and 5.
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int i;
+	int n;
 
-	for (i = 1; i <= 100; i++)
+	n = 1;
+	printf("%d", n);
+	for (n = 2; n <= 100; n++)
 	{
-		if ((i % 3) == 0)
+		if ((n % 3 == 0) && (n % 5 == 0))
 		{
-			printf("Fizz");
-			putchar(' ');
+			printf(" FizzBuzz");
 		}
-		else if ((i % 5) == 0)
+		else if (n % 3 == 0)
 		{
-			printf("Buzz");
-			putchar(' ');
+			printf(" Fizz");
 		}
-		else if ((i % 3) == 0 && (i % 5) == 0)
+		else if (n % 5 == 0)
 		{
-			printf("FizzBuzz");
-			putchar(' ');
+			printf(" Buzz");
 		}
 		else
 		{
-			printf("%d", i);
-			putchar(' ');
+			printf(" %d", n);
 		}
 	}
+	printf("\n");
 	return (0);
 }
